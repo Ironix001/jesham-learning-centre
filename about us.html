@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes growUp {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+h2 {
+    transform-origin: bottom; /* Grow upwards */
+    animation: growUp 1s ease-out; /* 1-second animation */
+    color: #28a745; /* Adjust to match the theme */
+    font-weight: bold;
+}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(90deg, #28a745, #ffd700);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        nav {
+            background-color: #28a745;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #28a745; /* Green theme color */
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #28a745;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <section class="welcome-remarks">
+                <h2>Welcome Remarks</h2>
+                Welcome to Jesham Learning Centre, where education meets excellence. We provide a safe and supportive environment, fostering curiosity, creativity, and a love for learning. Our goal is to equip every child with the skills and values needed to thrive in a dynamic world. Experience Jesham – where potential meets opportunity.</p>
+        </section>
+        </section>
+        <section class="quote">
+            <blockquote>
+                "Education is not the filling of a pail, but the lighting of a fire." – William Butler Yeats
+            </blockquote>
+            </section>
+        <section>
+            <h2>Our Mission</h2>
+            <p>To equip learners to be all-rounded individuals by providing quality and affordable education in a friendly environment.</p>
+        </section>
+        <section>
+            <h2>Our Vision</h2>
+            <p>To mould the young ones to become future leaders we will be proud of—responsible, morally upright, and having the fear of God.</p>
+        </section>
+        <section>
+            <h2>Our Motto</h2>
+            <p>Getting good education is the key that opens the door to a better life.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jesham Learning Centre. All rights reserved.</p>
+    </footer>
+</body>
+</html>

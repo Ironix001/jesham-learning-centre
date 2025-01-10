@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes growUp {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+h2, h3 {
+    transform-origin: bottom; /* Grow upwards */
+    animation: growUp 1s ease-out; /* 1-second animation */
+    color: #28a745; /* Adjust to match the theme */
+    font-weight: bold;
+}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(90deg, #28a745, #ffd700);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        nav {
+            background-color: #28a745;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .downloads h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-top: 1.5rem;
+        }
+
+        .downloads ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .downloads ul li {
+            margin: 0.5rem 0;
+        }
+
+        .downloads ul li a {
+            text-decoration: none;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .downloads ul li a:hover {
+            color: #ffd700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #28a745;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Downloads</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="downloads.html" class="active">Downloads</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Welcome to Jesham Learning Centre</h2>
+            <p>At Jesham Learning Centre, we are committed to providing quality and affordable education that nurtures well-rounded individuals in a friendly environment.</p>
+        </section>
+        <section class="downloads">
+            <h2>Downloadable Resources</h2>
+
+            <h3>School Menus</h3>
+            <ul>
+                <li><a href="files/school-menu-term-1.pdf" download>School Menu for Term 1</a></li>
+                <li><a href="files/school-menu-term-2.pdf" download>School Menu for Term 2</a></li>
+                <li><a href="files/school-menu-term-3.pdf" download>School Menu for Term 3</a></li>
+            </ul>
+
+            <h3>News and Updates</h3>
+            <ul>
+                <li><a href="files/newsletter.pdf" download>Newsletter term 1 2025</a></li>
+                <li><a href="files/newsletter.pdf" download>Newsletter term 2 2025</a></li>
+                <li><a href="files/newsletter.pdf" download>Newsletter term 3 2025</a></li>
+            </ul>
+
+            <h3>Academic Resources</h3>
+            <ul>
+                <li><a href="files/yearly-curriculum.pdf" download>Yearly Curriculum</a></li>
+            </ul>
+
+            <h3>Fee Structure</h3>
+            <ul>
+                <li><strong>Lower Primary</strong></li>
+                <ul>
+                    <li><a href="files/fee-structure-lower-primary.pdf" download>Fee Structure - Lower Primary</a></li>
+                </ul>
+                <li><strong>Grade 1-3</strong></li>
+                <ul>
+                    <li><a href="files/fee-structure-grade-1-3.pdf" download>Fee Structure - Grade 1-3</a></li>
+                </ul>
+                <li><strong>Grade 4-6</strong></li>
+                <ul>
+                    <li><a href="files/fee-structure-grade-4-6.pdf" download>Fee Structure - Grade 4-6</a></li>
+                </ul>
+                <li><strong>Grade 7-9</strong></li>
+                <ul>
+                    <li><a href="files/fee-structure-grade-7-9.pdf" download>Fee Structure - Grade 7-9</a></li>
+                </ul>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Jesham Learning Centre. All rights reserved.</p>
+    </footer>
+</body>
+</html>
