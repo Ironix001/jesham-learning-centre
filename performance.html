@@ -3,28 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performance - Jesham Learning Centre</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #28a745, #ffd700);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+        }
+
+        nav {
+            background-color: #28a745;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #ffd700;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #28a745;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Jesham Learning Centre</h1>
+        <h1>Performance</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about us.html">About us</a></li>
-                <li><a href="academic.html" class="active">Performance</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="performance.html">Performance</a></li>
                 <li><a href="downloads.html">Downloads</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2>Academic Programs</h2>
-        <p>Information about academic courses and programs will go here.</p>
+        <!-- Overall Sports Winners -->
+        <section id="sports-winners">
+            <h2>Overall Sports Winners</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Class</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Class 6</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Class 5</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Class 4</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Class Performance -->
+        <section id="class-performance">
+            <h2>Class Performance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Average Score (Term 1)</th>
+                        <th>Average Score (Term 2)</th>
+                        <th>Average Score (Term 3)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Class 1</td>
+                        <td>75%</td>
+                        <td>80%</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td>Class 2</td>
+                        <td>70%</td>
+                        <td>75%</td>
+                        <td>78%</td>
+                    </tr>
+                    <tr>
+                        <td>Class 3</td>
+                        <td>82%</td>
+                        <td>85%</td>
+                        <td>87%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Buttons to Graph Pages -->
+        <section class="button-container">
+            <a href="sports-performance.html">View Sports Graphs</a>
+            <a href="academic-performance.html">View Academic Graphs</a>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Jesham Learning Centre. All rights reserved.</p>
+        <p>&copy; 2025 Jesham Learning Centre. All rights reserved.</p>
     </footer>
 </body>
 </html>
