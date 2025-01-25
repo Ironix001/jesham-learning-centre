@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesham Learning Centre - Home</title>
+    <title>Jesham Learning Centre - Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -68,7 +68,7 @@
 
         .banner {
             position: relative;
-            background-image: url('pexels-sebastian-sunset.jpg'); /* Use your uploaded image here */
+            background-image: url('pexels-sebastian-sunset.jpg'); /* Replace with your banner image */
             background-size: cover;
             background-position: center;
             color: white;
@@ -82,58 +82,45 @@
             margin: 0;
         }
 
-        .section {
+        main {
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section h2 {
-            font-size: 1.8rem;
+        h1 {
+            text-align: center;
             color: #004d00;
+            margin-bottom: 2rem;
+        }
+
+        .year-section {
+            margin-bottom: 3rem;
+        }
+
+        .year-title {
+            font-size: 1.8rem;
+            color: #28a745;
             margin-bottom: 1rem;
-        }
-
-        .news {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .news-item {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-item h3 {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlights {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .highlight {
-            flex: 1;
-            min-width: 300px;
-            background-color: #f2f2f2;
-            padding: 1rem;
-            border-radius: 8px;
             text-align: center;
         }
 
-        .highlight img {
-            width: 50px;
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
             height: auto;
-            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
         }
 
         footer {
@@ -141,6 +128,7 @@
             padding: 1rem 0;
             background-color: #004d00;
             color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -155,7 +143,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about us.html">About Us</a></li>
+                <li><a href="about_us.html">About Us</a></li>
                 <li><a href="performance.html">Performance</a></li>
                 <li><a href="downloads.html">Downloads</a></li>
                 <li><a href="departments.html">Departments</a></li>
@@ -166,51 +154,36 @@
     </header>
 
     <div class="banner">
-        <h2>Welcome to Jesham Learning Centre</h2>
+        <h2>School Gallery</h2>
     </div>
 
     <main>
-        <section class="section">
-            <h2>A home to better education</h2>
-            <p>At Jesham Learning Centre, we are dedicated to shaping bright futures by offering a nurturing environment for young minds. Join us and be part of a community that values academic excellence, creativity, and holistic development.</p>
-            <p class="quote">"The future belongs to those who dare to dream and have the courage to turn their dreams into reality."</p>
-        </section>
+        <h1>Gallery</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">Explore memorable moments from Jesham Learning Centre over the years.</p>
 
-        <section class="section">
-            <h2>Latest News & Updates</h2>
-            <div class="news">
-                <div class="news-item">
-                    <h3>Sports Day Highlights</h3>
-                    <p>Catch up on the exciting moments from our recent sports day.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Upcoming Term Dates</h3>
-                    <p>Mark your calendars with important dates for the next term.</p>
-                </div>
-                <div class="news-item">
-                    <h3>New Facilities</h3>
-                    <p>We are excited to announce the launch of our new science lab.</p>
-                </div>
+        <!-- Section for 2018 -->
+        <div class="year-section">
+            <h2 class="year-title">2018</h2>
+            <div class="photo-grid">
+                <img src="2018_photo1.jpg" alt="2018 Photo 1">
+                <img src="2018_photo2.jpg" alt="2018 Photo 2">
+                <img src="2018_photo3.jpg" alt="2018 Photo 3">
+                <img src="2018_photo4.jpg" alt="2018 Photo 4">
             </div>
-        </section>
+        </div>
 
-        <section class="section">
-            <h2>Key Highlights</h2>
-            <div class="highlights">
-                <div class="highlight">
-                    <img src="icon1.png" alt="Icon">
-                    <p>Experienced Staff</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon2.png" alt="Icon">
-                    <p>State-of-the-Art Facilities</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon3.png" alt="Icon">
-                    <p>Holistic Development</p>
-                </div>
+        <!-- Section for 2019 -->
+        <div class="year-section">
+            <h2 class="year-title">2019</h2>
+            <div class="photo-grid">
+                <img src="2019_photo1.jpg" alt="2019 Photo 1">
+                <img src="2019_photo2.jpg" alt="2019 Photo 2">
+                <img src="2019_photo3.jpg" alt="2019 Photo 3">
+                <img src="2019_photo4.jpg" alt="2019 Photo 4">
             </div>
-        </section>
+        </div>
+
+        <!-- Add more sections for additional years -->
     </main>
 
     <footer>

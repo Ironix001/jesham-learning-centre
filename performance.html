@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performance</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jesham Learning Centre - Performance</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -15,20 +15,32 @@
         }
 
         header {
-            background: linear-gradient(90deg, #28a745, #ffd700);
+            background-color: #004d00;
             color: white;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-family: 'Georgia', serif;
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 130px;
+            height: auto;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
         }
 
         nav {
-            background-color: #28a745;
+            background-color: #003300;
             padding: 0.5rem 0;
         }
 
@@ -41,13 +53,13 @@
         }
 
         nav ul li {
-            margin: 0 1rem;
+            margin: 0 1.5rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
         }
 
@@ -55,17 +67,34 @@
             color: #ffd700;
         }
 
+        .banner {
+            position: relative;
+            background-image: url('pexels-sebastian-sunset.jpg'); /* Use your uploaded image here */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
+
         main {
             padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         section {
+            background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+            padding: 2rem;
+            border-radius: 10px;
             margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
@@ -118,32 +147,38 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #28a745;
+            background-color: #004d00;
             color: white;
             margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Performance</h1>
+        <div class="header-content">
+            <div class="logo">
+                <img src="jesham logo tr.png" alt="School Logo">
+            </div>
+            <div class="school-name">Jesham Learning Centre</div>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="about us.html">About Us</a></li>
                 <li><a href="performance.html">Performance</a></li>
                 <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="news-and-events.html">News & Events</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="banner">
+        <h2>Performance</h2>
+    </div>
+
     <main>
-        <!-- Overall Sports Winners -->
         <section id="sports-winners">
             <h2>Overall Sports Winners</h2>
             <table>
@@ -174,7 +209,6 @@
             </table>
         </section>
 
-        <!-- Class Performance -->
         <section id="class-performance">
             <h2>Class Performance</h2>
             <table>
@@ -209,9 +243,8 @@
             </table>
         </section>
 
-        <!-- Buttons to Graph Pages -->
         <section class="button-container">
-            <a href="sports-performance.html">View Sports Graphs</a>
+            <a href="sports-performance.html">View Sports Performance</a>
             <a href="academic-performance.html">View Academic Graphs</a>
         </section>
     </main>

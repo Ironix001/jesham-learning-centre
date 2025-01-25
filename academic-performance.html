@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesham Learning Centre - Home</title>
+    <title>Jesham Learning Centre - Academic Performance</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Basic Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -68,7 +69,7 @@
 
         .banner {
             position: relative;
-            background-image: url('pexels-sebastian-sunset.jpg'); /* Use your uploaded image here */
+            background-image: url('pexels-sebastian-sunset.jpg'); /* Use your uploaded image */
             background-size: cover;
             background-position: center;
             color: white;
@@ -82,58 +83,68 @@
             margin: 0;
         }
 
-        .section {
+        main {
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section h2 {
-            font-size: 1.8rem;
-            color: #004d00;
-            margin-bottom: 1rem;
-        }
-
-        .news {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .news-item {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 1rem;
+        .content-section {
+            background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: -50px; /* Overlap with the banner */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .news-item h3 {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlights {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .highlight {
-            flex: 1;
-            min-width: 300px;
-            background-color: #f2f2f2;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .highlight img {
-            width: 50px;
-            height: auto;
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: #28a745;
+            font-weight: bold;
             margin-bottom: 1rem;
+        }
+
+        .dropdown-container {
+            margin-bottom: 1rem;
+        }
+
+        .dropdown-container label {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+
+        .dropdown-container select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .generate-button {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .generate-button:hover {
+            background-color: #1d8c37;
+        }
+
+        .chart-placeholder {
+            background-color: #f0f0f0;
+            height: 300px;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #666;
+            border: 2px dashed #ddd;
         }
 
         footer {
@@ -141,6 +152,7 @@
             padding: 1rem 0;
             background-color: #004d00;
             color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -166,49 +178,33 @@
     </header>
 
     <div class="banner">
-        <h2>Welcome to Jesham Learning Centre</h2>
+        <h2>Academic Performance</h2>
     </div>
 
     <main>
-        <section class="section">
-            <h2>A home to better education</h2>
-            <p>At Jesham Learning Centre, we are dedicated to shaping bright futures by offering a nurturing environment for young minds. Join us and be part of a community that values academic excellence, creativity, and holistic development.</p>
-            <p class="quote">"The future belongs to those who dare to dream and have the courage to turn their dreams into reality."</p>
-        </section>
+        <section class="content-section">
+            <h2>Select a Class to View Performance</h2>
+            <div class="dropdown-container">
+                <label for="class-select">Class:</label>
+                <select id="class-select">
+                    <optgroup label="Lower Primary">
+                        <option value="pp1">PP1</option>
+                        <option value="pp2">PP2</option>
+                    </optgroup>
+                    <optgroup label="Grade 1-9">
+                        <option value="grade-1">Grade 1</option>
+                        <option value="grade-2">Grade 2</option>
+                        <option value="grade-3">Grade 3</option>
+                        <option value="grade-4">Grade 4</option>
+                        <option value="grade-5">Grade 5</option>
+                        <option value="grade-6">Grade 6</option>
 
-        <section class="section">
-            <h2>Latest News & Updates</h2>
-            <div class="news">
-                <div class="news-item">
-                    <h3>Sports Day Highlights</h3>
-                    <p>Catch up on the exciting moments from our recent sports day.</p>
-                </div>
-                <div class="news-item">
-                    <h3>Upcoming Term Dates</h3>
-                    <p>Mark your calendars with important dates for the next term.</p>
-                </div>
-                <div class="news-item">
-                    <h3>New Facilities</h3>
-                    <p>We are excited to announce the launch of our new science lab.</p>
-                </div>
+                    </optgroup>
+                </select>
+                <button class="generate-button" onclick="generateGraph()">Generate</button>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>Key Highlights</h2>
-            <div class="highlights">
-                <div class="highlight">
-                    <img src="icon1.png" alt="Icon">
-                    <p>Experienced Staff</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon2.png" alt="Icon">
-                    <p>State-of-the-Art Facilities</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon3.png" alt="Icon">
-                    <p>Holistic Development</p>
-                </div>
+            <div id="chart-container" class="chart-placeholder">
+                Select a class and click "Generate" to view the graph.
             </div>
         </section>
     </main>
@@ -216,5 +212,13 @@
     <footer>
         <p>&copy; 2025 Jesham Learning Centre. All rights reserved.</p>
     </footer>
+
+    <script>
+        function generateGraph() {
+            const classSelected = document.getElementById('class-select').value;
+            const chartContainer = document.getElementById('chart-container');
+            chartContainer.innerHTML = `Graphical Representation of Performance for ${classSelected}`;
+        }
+    </script>
 </body>
 </html>

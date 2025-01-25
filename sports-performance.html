@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Performance</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jesham Learning Centre - Sports Performance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f3f3f3;
             color: #333;
         }
 
         header {
-            background: linear-gradient(90deg, #28a745, #ffd700);
+            background-color: #004d00;
             color: white;
             padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-family: 'Georgia', serif;
-            padding-left: 1rem;
-        }
-
-        .logo {
-            margin-right: 1rem;
         }
 
         .logo img {
-            width: 100px;
+            width: 130px;
             height: auto;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        nav {
+            background-color: #003300;
+            padding: 0.5rem 0;
         }
 
         nav ul {
@@ -48,81 +54,225 @@
         }
 
         nav ul li {
-            margin: 0 1rem;
+            margin: 0 1.5rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
             color: #ffd700;
         }
 
+        /* Banner Section */
+        .banner {
+            position: relative;
+            background-image: url('sportballs.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 128, 0, 0.7), rgba(0, 64, 0, 0.8));
+            z-index: 1;
+        }
+
+        .banner h2 {
+            position: relative;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+
+        /* Main Section */
         main {
             padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: white;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-container {
+            background: white;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in-out;
         }
 
-        section h2 {
+        .section-container h2 {
             font-size: 1.8rem;
             color: #28a745;
-            font-weight: bold;
             margin-bottom: 1rem;
+            border-bottom: 2px solid #004d00;
+            display: inline-block;
+            padding-bottom: 0.3rem;
         }
 
-        .chart-placeholder {
-            background-color: #f0f0f0;
-            height: 300px;
+        .sport-section {
+            margin-bottom: 2rem;
+        }
+
+        .top-winners {
+            list-style: none;
+            padding: 0;
             margin: 1rem 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2rem;
-            color: #666;
-            border: 2px dashed #ddd;
         }
 
+        .top-winners li {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .top-winners li::before {
+            content: "\f091";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #28a745;
+            margin-right: 10px;
+        }
+
+        /* Rankings Table */
+        .rankings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .rankings-table th,
+        .rankings-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .rankings-table th {
+            background-color: #004d00;
+            color: white;
+        }
+
+        .rankings-table td {
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        .rankings-table tr:hover td {
+            background-color: #e0ffe0;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #28a745;
+            background-color: #004d00;
             color: white;
             margin-top: 2rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sports Performance</h1>
-        <div class="logo">
-            <img src="jesham logo tr.png" alt="School Logo">
+        <div class="header-content">
+            <div class="logo">
+                <img src="jesham logo tr.png" alt="School Logo">
+            </div>
+            <div class="school-name">Jesham Learning Centre</div>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
                 <li><a href="performance.html">Performance</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="departments.html">Departments</a></li>
                 <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="banner">
+        <h2>Sports Performance</h2>
+    </div>
+
     <main>
-        <section>
-            <h2>Sports Day Results</h2>
-            <div class="chart-placeholder">Graphical Representation of Sports Results</div>
-        </section>
-        <section>
-            <h2>Class Performance in Games</h2>
-            <div class="chart-placeholder">Graphical Representation of Class Performance</div>
-        </section>
+        <div class="section-container">
+            <section class="sport-section">
+                <h2>Top 5 Winners</h2>
+                <h3>Netball</h3>
+                <ul class="top-winners">
+                    <li>1st: Alice M.</li>
+                    <li>2nd: Jane K.</li>
+                    <li>3rd: Grace L.</li>
+                    <li>4th: Esther W.</li>
+                    <li>5th: Nancy T.</li>
+                </ul>
+                <h3>Football</h3>
+                <ul class="top-winners">
+                    <li>1st: John D.</li>
+                    <li>2nd: Mark A.</li>
+                    <li>3rd: Peter O.</li>
+                    <li>4th: Kevin S.</li>
+                    <li>5th: Paul M.</li>
+                </ul>
+            </section>
+
+            <section class="sport-section">
+                <h2>Inter-School Competition Rankings</h2>
+                <table class="rankings-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>School</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jesham Learning Centre</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Greenwood Academy</td>
+                            <td>110</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bright Future School</td>
+                            <td>95</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
 
     <footer>

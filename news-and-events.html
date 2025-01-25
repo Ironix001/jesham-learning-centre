@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesham Learning Centre - Home</title>
+    <title>Jesham Learning Centre - News and Events</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -19,6 +19,7 @@
             color: white;
             padding: 1rem 0;
             text-align: center;
+            position: relative;
         }
 
         .header-content {
@@ -82,58 +83,96 @@
             margin: 0;
         }
 
-        .section {
+        main {
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section h2 {
-            font-size: 1.8rem;
-            color: #004d00;
-            margin-bottom: 1rem;
-        }
-
-        .news {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .news-item {
-            flex: 1;
-            min-width: 300px;
-            background-color: white;
-            border-radius: 8px;
-            padding: 1rem;
+        .section-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: -50px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .news-item h3 {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 0.5rem;
+        .section-container h2 {
+            font-size: 1.8rem;
+            color: #28a745;
         }
 
-        .highlights {
+        .button-section {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 2rem 0;
         }
 
-        .highlight {
-            flex: 1;
-            min-width: 300px;
-            background-color: #f2f2f2;
-            padding: 1rem;
-            border-radius: 8px;
+        .button-section a {
+            text-decoration: none;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
             text-align: center;
         }
 
-        .highlight img {
-            width: 50px;
-            height: auto;
-            margin-bottom: 1rem;
+        .button-section a:hover {
+            background-color: #1e7a36;
+        }
+
+        .news-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: scale(1.02);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card-content {
+            padding: 1rem;
+        }
+
+        .news-card-content h3 {
+            font-size: 1.5rem;
+            color: #28a745;
+            margin: 0.5rem 0;
+        }
+
+        .news-card-content p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0;
+        }
+
+        .news-card-content a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-card-content a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -141,6 +180,7 @@
             padding: 1rem 0;
             background-color: #004d00;
             color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -166,51 +206,35 @@
     </header>
 
     <div class="banner">
-        <h2>Welcome to Jesham Learning Centre</h2>
+        <h2>News and Events</h2>
     </div>
 
     <main>
-        <section class="section">
-            <h2>A home to better education</h2>
-            <p>At Jesham Learning Centre, we are dedicated to shaping bright futures by offering a nurturing environment for young minds. Join us and be part of a community that values academic excellence, creativity, and holistic development.</p>
-            <p class="quote">"The future belongs to those who dare to dream and have the courage to turn their dreams into reality."</p>
-        </section>
+        <div class="section-container">
+            <section>
+                <div class="button-section">
+                    <a href="projects.html">Projects</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="events.html">Events</a>
+                </div>
+            </section>
 
-        <section class="section">
-            <h2>Latest News & Updates</h2>
-            <div class="news">
-                <div class="news-item">
-                    <h3>Sports Day Highlights</h3>
-                    <p>Catch up on the exciting moments from our recent sports day.</p>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>Explore ongoing and completed projects that highlight our dedication to growth and development.</p>
+                <div class="news-section">
+                    <div class="news-card">
+                        <img src="images/project1.jpg" alt="Project Image">
+                        <div class="news-card-content">
+                            <h3>Multipurpose Hall Progress</h3>
+                            <p>June 19, 2024</p>
+                            <p>Construction of the multipurpose hall is in progress to enhance our facilities.</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-item">
-                    <h3>Upcoming Term Dates</h3>
-                    <p>Mark your calendars with important dates for the next term.</p>
-                </div>
-                <div class="news-item">
-                    <h3>New Facilities</h3>
-                    <p>We are excited to announce the launch of our new science lab.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Key Highlights</h2>
-            <div class="highlights">
-                <div class="highlight">
-                    <img src="icon1.png" alt="Icon">
-                    <p>Experienced Staff</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon2.png" alt="Icon">
-                    <p>State-of-the-Art Facilities</p>
-                </div>
-                <div class="highlight">
-                    <img src="icon3.png" alt="Icon">
-                    <p>Holistic Development</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
